@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+     <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+        <div id="nav">
+            <h:outputLink value="#"  class="link"></h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+            <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+                  <h:outputLink value="salespersonIndex.xhtml" class="link">Sale Person Area</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+        </div>
+    
+    
+    <h:body>
+        <center>
+        <h>Add User</h>
+        <h:form>
+            
+            <p>Enter Last Name : </p>
+            <h:inputText id="lastName" label="lastName" size="32" value="#{customerManagedBean.lastname}" required="true" requiredMessage="You must enter LastName">
+               <f:validateRegex pattern="((\D).{2,20})"></f:validateRegex>
+            </h:inputText>
+         
+            
+            <br/>
+            <br/>
+            
+             <p>Enter First Name : </p>
+             <h:inputText id="firstName" label="firstName" size="32" value="#{customerManagedBean.firstname}" required="true" requiredMessage="You must enter FirstName"> 
+              <f:validateRegex pattern="((\D).{2,20})"></f:validateRegex>
+             </h:inputText>
+              
+             
+             <br/>
+            <br/>
+            
+            <p>Enter Email :/</p>
+            <h:inputText id="email" label="email" size="32" value="#{customerManagedBean.email}" required="true" requiredMessage="You must enter email">  
+            <f:validateRegex
+		pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+            
+            </h:inputText>
+            
+            <br/>
+            <br/>
+            
+              <p>Select a User Type</p>
+              <h:selectOneMenu id="type" value="#{customerManagedBean.type}" required="true"    requiredMessage="You must select a type!" class="selectMenu">
+                        <f:selectItem itemValue="#{null}" itemLabel="Please select One Type" />
+                        <f:selectItems value="#{customerManagedBean.returnUserType()}"></f:selectItems>
+             </h:selectOneMenu>
+             <br/>
+             <br/>
+            
+               <p>Address :/</p>
+               <h:inputText id="address" label="address" size="32" value="#{customerManagedBean.address}" required="true" requiredMessage="You must enter address">  </h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Enter Phone :/</p>
+            <h:inputText id="phone" label="phone" size="32" maxlength="10" value="#{customerManagedBean.phone}" required="true" requiredMessage="You must enter email" converterMessage="Please enter digits only."> 
+            
+                <f:validateRegex pattern="04[\d]{8}"></f:validateRegex>
+            </h:inputText>
+            <br/>
+            <br/>
+            
+               <p>Enter UserName :/</p>
+               <h:inputText id="username" label="username" size="32" value="#{customerManagedBean.username}" required="true" requiredMessage="You must enter username">  </h:inputText>
+            <br/>
+            <br/>
+            
+            
+            <p>Enter Password :/</p>
+            <h:inputText id="password" label="password" size="32" value="#{customerManagedBean.password}" required="true" requiredMessage="You must enter username">  </h:inputText>
+            <br/>
+            <br/>
+            
+              <br/>
+            <br/>
+            <h:commandButton id="addUser" value="Add User Now" action="addUserResponse" class="btn" > </h:commandButton>
+            
+            
+        </h:form>
+        </center>
+        
+        
+    </h:body>
+</html>
+

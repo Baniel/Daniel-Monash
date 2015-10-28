@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+    <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+        <div id="nav">
+            <h:outputLink value="#"  class="link"></h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+            <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+                  <h:outputLink value="salespersonIndex.xhtml" class="link">Sale Person Area</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+        </div>
+    
+    
+
+    <h:body>
+        
+        <br/>
+        <br/>
+        <center>
+        <h3> Delete Car </h3>
+
+
+        <h:dataTable var="car" value="#{carManagedBeans.viewCar()}" border="1">
+
+            <h:column>
+                <f:facet name="header">VIN</f:facet>
+                <h:outputText value="#{car.vin}"></h:outputText>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Make</f:facet>
+                <h:outputText value="#{car.make}"></h:outputText>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Model No</f:facet>
+                <h:outputText value="#{car.modelno}"></h:outputText>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Model Name</f:facet>
+                <h:outputText value="#{car.modelname}"></h:outputText>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Type</f:facet>
+                <h:outputText value="#{car.type}"></h:outputText>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Thumbnail</f:facet>
+                <img src="#{car.thumbnail}" height="200px" width="500px"></img>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{car.description}"></h:outputText>
+            </h:column>    
+
+            <h:column>
+                <f:facet name="header">Colour</f:facet>
+                <h:outputText value="#{car.colour}"></h:outputText>
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Instock</f:facet>
+                <h:outputText value="#{car.instock}"></h:outputText>
+            </h:column>
+
+        </h:dataTable>
+
+
+
+
+             <h:form>
+                 <h:selectOneMenu id="type" value="#{carManagedBeans.VIN}" required="true"    requiredMessage="You must select a type!" class="selectMenu">
+                        <f:selectItem itemValue="#{null}" itemLabel="Please select One Car" />
+                        <f:selectItems value="#{carManagedBeans.getVINStringByLocatDatabase()}"></f:selectItems>
+             </h:selectOneMenu>
+                 
+                 <br/>
+                 <br/>
+                 <h:commandButton value="Delete a Car" action="deleteCarResult" class="btn"/>
+             </h:form>
+
+
+        </center>
+
+
+    </h:body>
+</html>
+

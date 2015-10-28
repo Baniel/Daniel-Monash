@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+
+    <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+        <div id="nav">
+            <h:outputLink value="#"  class="link"></h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+            <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+                  <h:outputLink value="salespersonIndex.xhtml" class="link">Sale Person Area</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+        </div>
+    
+    
+    <h:body>
+        
+        <center>
+        <h3>Add Car</h3>
+     
+        <h:form>
+            
+            <p>Enter VIN :</p>
+            <h:inputText id="VIN" label="VIN" size="32" maxlength="17" value="#{carManagedBeans.VIN}" required="true" requiredMessage="You must enter VIN!!!">
+                <f:validateLength minimum="17" maximum="18"></f:validateLength>
+                
+            </h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Enter Model No:</p>
+            <h:inputText id="modelNo" label="modelNo" size="32" value="#{carManagedBeans.modelNo}" required="true" requiredMessage="You must enter Model NO!!!"></h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Enter Model Name</p>
+            <h:inputText id="modelName" label="modelName" size="32" value="#{carManagedBeans.modelName}" required="true" requiredMessage="You must enter Model Name!!!"></h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Enter Make</p>
+            <h:inputText id="make" label="make" size="32" value="#{carManagedBeans.make}" required="true" requiredMessage="You must enter Make!!!"></h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Select a Car Type</p>
+            <h:selectOneMenu id="type" value="#{carManagedBeans.type}" required="true"    requiredMessage="You must select a type!" class="selectMenu">
+                        <f:selectItem itemValue="#{null}" itemLabel="Please select One Type" />
+                        <f:selectItems value="#{carManagedBeans.returnCarType()}"></f:selectItems>
+             </h:selectOneMenu>
+             <br/>
+             <br/>
+             
+            
+            <p>Enter Thumbnail </p>
+            <h:inputText id="thumbnail" label="thumbnail" value="#{carManagedBeans.thumbnail}" required="true" requiredMessage="You must enter a thumbnail"></h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Enter Description</p>
+            <h:inputTextarea id="descripton" label="description" value="#{carManagedBeans.description}" required="true" requiredMessage="You must enter a Description"></h:inputTextarea>
+            <br/>
+            <br/>
+            
+            <p>Enter a Color </p>
+            <h:inputText id="colour" label="colour" value="#{carManagedBeans.colour}" required="true" requiredMessage="You must enter a Colour!!!"></h:inputText>
+            <br/>
+            <br/>
+            
+            <p>Enter a Price </p>
+            <h:inputText id="price" label="price" value="#{carManagedBeans.price}" required="true" requiredMessage="You must enter a Colour!!!" converterMessage="Enter Only Digits">
+                <f:validateRegex for="price"  pattern="(([^a-zA-Z]).{2,30})" ></f:validateRegex>
+            </h:inputText>
+            <br/>
+            <br/>
+            
+            
+          
+            
+       
+            
+            
+            
+            
+            
+            <br/>
+            <br/>
+            <h:commandButton id="addCar" value="Add Car Now" action="addCarResponse" class="btn" > </h:commandButton>
+        </h:form>
+        
+        
+        </center>
+        
+        
+    </h:body>
+    
+    
+</html>
+

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+
+
+    <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+    <div id="nav">
+        <h:outputLink value="#"  class="link"></h:outputLink>
+        <h:outputLink value="#" class="link"></h:outputLink>
+        <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+        <h:outputLink value="#" class="link"></h:outputLink>
+        <h:outputLink value="SalespersonDetail.xhtml" class="link">Saleperson Detaili</h:outputLink>
+        <h:outputLink value="#" class="link"></h:outputLink>
+    </div>
+
+
+    <h:body>
+
+        <center>
+            <h1>SalesPerson Area</h1>
+
+
+
+            <table>
+                <tr><td>
+                        <br/>
+                        <br/>
+                        <h:form>
+                            <h:commandButton value="View Car" action="viewCar" class="btn"/>
+                        </h:form>
+                        <br/>
+                        <br/>
+
+                        <h:form>
+                            <h:commandButton value="Add a car Manually" action="addCar" class="btn"/>
+                        </h:form>
+                        <br/>
+                        <br/>
+
+
+                        <h:form>
+                            <h:commandButton value="Add a car from Web Services" action="addCarByRestful" class="btn"/>
+                        </h:form>
+                        <br/>
+                        <br/>
+
+                        <h:form>
+                            <h:commandButton value="Update Car" action="updateCar" class="btn"/>
+                        </h:form>
+                        <br/>
+                        <br/>
+
+                        <h:form>
+                            <h:commandButton value="Delete Car" action="deleteCar" class="btn"/>
+                        </h:form>
+                      
+                    </td>
+
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    </td>
+                   
+                    <td>
+
+                          <br/>
+                        <br/>
+                        
+                         <h:form>
+                            <h:commandButton value="Find Customer" action="findCustomer" class="btn"/>
+                        </h:form>
+
+                       
+
+                        <br/>
+                        <br/>
+
+                        <h:form>
+                            <h:commandButton value="Add User" action="addUser" class="btn"/>
+                        </h:form>
+
+                    </td>
+                </tr>
+            </table>
+
+
+        </center>
+
+
+
+
+    </h:body>
+</html>
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+     <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+        <div id="nav">
+            <h:outputLink value="#"  class="link"></h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+            <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+                  <h:outputLink value="salespersonIndex.xhtml" class="link">Sale Person Area</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+        </div>
+    
+    <h:body>
+        
+      
+
+         <h:form>
+             
+            <center>
+                  <h>Update User</h>
+                <br/>
+                <br/>
+                
+                <p>Enter Customer LastName:
+                    <h:inputText id="lastName" label="lastName" size="32" value="#{customerManagedBean.lastname}" required="true" requiredMessage="You Must Enter a LastName"/>
+                </p>
+                <br/>
+                <br/>
+                
+                <p>Enter Customer FirstName:
+                    <h:inputText id="firstName" label="firstName" size="32" value="#{customerManagedBean.firstname}" required="true" requiredMessage="You Must Enter a Type"/>
+                </p>
+                <br/>
+                <br/>
+                
+                
+                <p>Enter Customer Type:
+                    <h:inputText id="type" label="type" size="32" value="#{customerManagedBean.type}" required="true" requiredMessage="You must enter Type!!!"/>
+                </p>
+                <br/>
+                <br/>
+                
+                <p>Enter Customer Email:
+                    <h:inputText id="Email" label="Email" size="32" value="#{customerManagedBean.email}" required="true" requiredMessage="You must enter Email!!!"/>
+                </p>
+                <br/>
+                <br/>
+                
+                <h:commandButton id="searchButton" value="Update Now" action="UpdateUserDetailReponse" class="btn"></h:commandButton>
+                
+                
+                
+                
+            </center>
+        </h:form>
+
+
+    </h:body>
+</html>
+

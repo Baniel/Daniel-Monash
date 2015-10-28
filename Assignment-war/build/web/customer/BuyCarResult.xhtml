@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+      <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+    <div id="nav">
+        <h:outputLink value="#"  class="link"></h:outputLink>
+        <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+          <h:outputLink value="#" class="link"></h:outputLink>
+            <h:outputLink value="CustomerDetail.xhtml" class="link">Customer Detail</h:outputLink>
+        <h:outputLink value="#" class="link"></h:outputLink>
+        <h:outputLink value="customerIndex.xhtml" class="link">Customer Page</h:outputLink>
+    </div>
+    
+    
+    <h:body>
+    
+        
+        <center>
+            
+<!--            <br/>
+            <br/>
+            <h:outputText value="#{customerManagedBean.username}"/>
+            
+            <br/>
+            <br/>
+            <h:outputText value="#{customerManagedBean.getUserIDByUsername()}"  />
+            
+            <br/>
+            <br/>
+            <h:outputText value="#{customerManagedBean.getDate()}"  />
+            
+            
+             <br/>
+            <br/>
+            <h:outputText value="#{customerManagedBean.bill}"/>
+            
+            
+                     <br/>
+            <br/>
+            <h:outputText value="#{carManagedBeans.VIN}"/>
+            
+                         <br/>
+            <br/>
+            <h:outputText value="#{carManagedBea}"/>
+            
+            
+             <br/>
+            <br/>
+            <h:outputText value="#{customerManagedBean.getSaleid()}"/>
+            -->
+            
+            
+            
+            <br/>
+            <br/>
+            <p>   <h:outputLabel value="#{customerManagedBean.addSaleIntoDatabase()}"/> </p>
+            
+        </center>
+        
+        
+    </h:body>
+</html>
+

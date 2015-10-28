@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+    <h:outputStylesheet name="CSS/NavigationBar.css"/>
+
+
+        <div id="nav">
+            <h:outputLink value="#"  class="link"></h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+            <h:outputLink value="../index.xhtml" class="link">Home Page</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+                  <h:outputLink value="salespersonIndex.xhtml" class="link">Sale Person Area</h:outputLink>
+            <h:outputLink value="#" class="link"></h:outputLink>
+        </div>
+    
+    
+    <h:body>
+
+
+         <center>
+            <h2> Customer Result</h2> 
+
+            <h:dataTable var="customer" value="#{customerManagedBean.searchCustomerByCombination()}" border="1">
+
+                <h:column>
+                    <f:facet name="header">User id</f:facet>
+                    <h:outputText value="#{customer.userid}"></h:outputText>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Last Name</f:facet>
+                    <h:outputText value="#{customer.lastname}"></h:outputText>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">First Name</f:facet>
+                    <h:outputText value="#{customer.firstname}"></h:outputText>
+                </h:column>
+
+
+
+
+                <h:column>
+                    <f:facet name="header">Email</f:facet>
+                    <h:outputText value="#{customer.email}"></h:outputText>
+                </h:column>
+
+
+                 <h:column>
+                    <f:facet name="header">Address</f:facet>
+                    <h:outputText value="#{customer.address}"></h:outputText>
+                </h:column>
+                
+                 <h:column>
+                    <f:facet name="header">Phone</f:facet>
+                    <h:outputText value="#{customer.phone}"></h:outputText>
+                </h:column>
+                
+             
+
+
+
+            </h:dataTable>
+
+        </center>     
+
+
+    </h:body>
+</html>
+
