@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_background"
+    android:apiKey="Fmjtd%7Cluu82q0a25%2C70%3Do5-94yllf"
+    android:clickable="true" >
+
+     <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="User Name : "
+        android:textSize="25sp"
+       >
+    </TextView>
+
+     <EditText
+         android:id="@+id/editText1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/userName"
+         android:layout_below="@+id/userName"
+         android:layout_marginTop="19dp"
+         android:ems="10"
+         android:hint="Please input user name"
+         android:inputType="textPersonName" >
+
+         <requestFocus />
+     </EditText>
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/editText1"
+         android:layout_below="@+id/editText1"
+         android:layout_marginTop="20dp"
+         android:text="Password : "
+         android:textSize="25sp" />
+
+     <EditText
+         android:id="@+id/editText2"
+         android:layout_width="300dp"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView1"
+         android:layout_below="@+id/textView1"
+         android:layout_marginTop="18dp"
+         android:ems="10"
+         android:inputType="textPassword"
+         android:hint="Pleaseinput Password" 
+         />
+
+     <ImageButton
+         android:id="@+id/imageButton1"
+         android:layout_width="170dp"
+         android:layout_height="60dp"
+         android:layout_alignParentBottom="true"
+        
+         android:layout_marginLeft="20dp"
+         android:layout_marginBottom="20dp"
+         android:background="@drawable/regiser_button" />
+
+</RelativeLayout>

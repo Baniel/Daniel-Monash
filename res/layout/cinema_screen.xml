@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cinema_background" >
+
+    <TextView
+        android:id="@+id/textView_movieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:text="MovieName"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android1:id="@+id/radioGroup_cinema"
+        android1:layout_width="match_parent"
+        android1:layout_height="350dp"
+        android1:layout_alignParentLeft="true"
+        android1:layout_below="@+id/textView_movieName"
+        android1:layout_marginTop="21dp" >
+
+        <RadioButton
+            android1:id="@+id/radio_cinema1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:layout_alignParentLeft="true"
+            android1:layout_below="@+id/textView_movieName"
+            android1:layout_marginTop="14dp"
+            android1:text="RadioButton" />
+
+        
+
+        <RelativeLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="120dp" >
+
+            <Button
+                android1:id="@+id/button_data1"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_alignParentLeft="true"
+                android1:layout_alignParentTop="true"
+                android1:text="Button" />
+
+            <Button
+                android1:id="@+id/button_data2"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_alignParentLeft="true"
+                android1:layout_below="@+id/button_data1"
+                android1:text="Button" />
+
+        </RelativeLayout>
+
+        <RadioButton
+            android1:id="@+id/radio_cinema2"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+           
+            android1:checked="false"
+            android1:text="RadioButton" />
+        
+        
+        <RelativeLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="60dp" >
+
+            <Button
+                android1:id="@+id/button_data3"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_alignParentLeft="true"
+                android1:layout_centerVertical="true"
+                android1:text="Button" />
+        
+         </RelativeLayout>
+        
+     
+    </RadioGroup>
+
+    <Button
+        android1:id="@+id/button_selectednew"
+        android1:layout_width="350dp"
+        android1:layout_height="wrap_content"
+        android1:layout_alignParentBottom="true"
+        android1:layout_alignParentLeft="true"
+        android1:text="Selection" />
+
+</RelativeLayout>

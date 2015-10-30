@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Assignment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="registration_button">Back to Registration</string>
+    <string name="menu_button">MENU</string>
+    <string name="movie_button">MOVIE</string>
+    <string name="cinema_button">CINEMA</string>
+    <string name="session_button">SESSION</string>
+    <string name="history_button">HISTORY</string>
+    <string name="map_button">MAP</string>
+    <string name="avengers2_text1">Avengers 2 </string>
+    <string name="avengers2_text2">The age of Ultron</string>
+    <string name="batmanvssuperman_text">Batman vs Superman</string>
+</resources>
