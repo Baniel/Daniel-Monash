@@ -1,0 +1,74 @@
+﻿
+@model IEnumerable<ass3.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/AlternatingRowColouring.css" />
+<script src="~/Scripts/AlternatingRowColouring.js"></script>
+<link rel="stylesheet" href="~/Content/RowHighlighting.css" />
+<script src="~/Scripts/RowHighlighting.js"></script>
+
+
+@*@Styles.Render("~/Content/RowHighlighting.css")
+    @Scripts.Render("~/Scripts/RowHighlighting.js")
+    @Styles.Render("~/Content/RowHighlighting.css")
+    @Scripts.Render("~/Scripts/AlternatingRowColouring.js")*@
+
+
+
+<h2>Orders</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        Find by Game : @Html.TextBox("game")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Game)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Game)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.FirstName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OrderID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OrderID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OrderID })
+            </td>
+        </tr>
+    }
+
+</table>

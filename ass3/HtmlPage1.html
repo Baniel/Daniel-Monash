@@ -1,0 +1,195 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Position - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #parent {
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            padding: 5px;
+            border: 1px solid #777;
+            background-color: #fbca93;
+            text-align: center;
+        }
+
+        .positionable {
+            position: absolute;
+            display: block;
+            right: 0;
+            bottom: 0;
+            background-color: #bcd5e6;
+            text-align: center;
+        }
+
+        #positionable1 {
+            width: 75px;
+            height: 75px;
+        }
+
+        #positionable2 {
+            width: 120px;
+            height: 40px;
+        }
+
+        select, input {
+            margin-left: 15px;
+        }
+    </style>
+    <script>
+  $(function() {
+    function position() {
+      $( ".positionable" ).position({
+        of: $( "#parent" ),
+        my: $( "#my_horizontal" ).val() + " " + $( "#my_vertical" ).val(),
+        at: $( "#at_horizontal" ).val() + " " + $( "#at_vertical" ).val(),
+        collision: $( "#collision_horizontal" ).val() + " " + $( "#collision_vertical" ).val()
+      });
+    }
+
+    $( ".positionable" ).css( "opacity", 0.5 );
+
+    $( "select, input" ).bind( "click keyup change", position );
+
+    $( "#parent" ).draggable({
+      drag: position
+    });
+
+    position();
+  });
+    </script>
+</head>
+<body>
+
+    <div id="parent">
+        <p>
+            This is the position parent element.
+        </p>
+    </div>
+
+    <div class="positionable" id="positionable1">
+        <p>
+            to position
+        </p>
+    </div>
+
+    <div class="positionable" id="positionable2">
+        <p>
+            to position 2
+        </p>
+    </div>
+
+    <div style="padding: 20px; margin-top: 75px;">
+        position...
+        <div style="padding-bottom: 20px;">
+            <b>my:</b>
+            <select id="my_horizontal">
+                <option value="left">left</option>
+                <option value="center">center</option>
+                <option value="right">right</option>
+            </select>
+            <select id="my_vertical">
+                <option value="top">top</option>
+                <option value="center">center</option>
+                <option value="bottom">bottom</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 20px;">
+            <b>at:</b>
+            <select id="at_horizontal">
+                <option value="left">left</option>
+                <option value="center">center</option>
+                <option value="right">right</option>
+            </select>
+            <select id="at_vertical">
+                <option value="top">top</option>
+                <option value="center">center</option>
+                <option value="bottom">bottom</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 20px;">
+            <b>collision:</b>
+            <select id="collision_horizontal">
+                <option value="flip">flip</option>
+                <option value="fit">fit</option>
+                <option value="flipfit">flipfit</option>
+                <option value="none">none</option>
+            </select>
+            <select id="collision_vertical">
+                <option value="flip">flip</option>
+                <option value="fit">fit</option>
+                <option value="flipfit">flipfit</option>
+                <option value="none">none</option>
+            </select>
+        </div>
+    </div>
+
+
+</body>
+</html>
+Want to learn more about the .position() method? Check out the API documentation.
+
+Interactions
+
+Draggable
+Droppable
+Resizable
+Selectable
+Sortable
+Widgets
+
+Accordion
+Autocomplete
+Button
+Datepicker
+Dialog
+Menu
+Progressbar
+Selectmenu
+Slider
+Spinner
+Tabs
+Tooltip
+Effects
+
+Add Class
+Color Animation
+Easing
+Effect
+Hide
+Remove Class
+Show
+Switch Class
+Toggle
+Toggle Class
+Utilities
+
+Position
+Widget Factory
+BOOKS
+
+ jQuery UI in Action by TJ VanToll jQuery UI in Action
+TJ VanToll
+ jQuery UI Themes by Adam BoduchjQuery UI Themes
+Adam Boduch
+ jQuery UI Cookbook by Adam BoduchjQuery UI Cookbook
+Adam Boduch
+Learning Center
+
+Forum
+
+API
+
+Twitter
+
+IRC
+
+GitHub
+Copyright 2015 The jQuery Foundation. jQuery License
+Web hosting by Media Temple | CDN by MaxCDN | Powered by WordPress | Thanks: Members, Sponsors
