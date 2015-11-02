@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"  >
+
+  <siteMapNode>
+
+    <!--主页-->
+    <siteMapNode url="~/index.aspx" title="Home"  description="Return to the Home">
+    </siteMapNode>
+
+    <!--注册-->
+    <siteMapNode url="~/Registration.aspx" title="Registration"  description="Go to register a account">
+    </siteMapNode>
+
+    <!--关于我们-->
+    <siteMapNode url="~/locked/AboutUs.aspx" title="About Us"  description="To know more aobut Us">
+
+      <siteMapNode url="~/locked/History.aspx" title="History"  description="Go to register a account">
+      </siteMapNode>
+
+      <siteMapNode url="~/locked/FrequentlyAskedQuestions.aspx" title="Frequently Asked Questions"  description="Go to register a account">
+      </siteMapNode>
+
+    </siteMapNode>
+
+    <!--站点地图-->
+    <siteMapNode url="~/SiteMap.aspx" title="Site Map"  description="Go to know about Site Map">
+    </siteMapNode>
+
+    <!--文档-->
+    <siteMapNode url="~/locked/Documentation.aspx" title="Documentation"  description="Go to know about Site Map">
+    </siteMapNode>
+    
+   <!--Email-->
+    <siteMapNode url="~/locked/Email.aspx" title="Email" description="Go to send a Email" target="_blank">
+    </siteMapNode>
+
+   
+
+  </siteMapNode>
+
+
+</siteMap>

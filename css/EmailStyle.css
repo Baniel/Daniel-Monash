@@ -1,0 +1,182 @@
+﻿body
+     {
+	background-color: white;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	/*font-size: 10pt;
+	text-align : justify;*/
+}
+
+.fieldHeader
+{
+	background-color:#DCDCDC;
+	font-size:10pt;
+	font-weight:bold;
+	color:Blue;
+	vertical-align:top;
+	width:70px;
+}
+
+.gvItems
+{
+	padding:3;
+	font-family:Arial;
+	font-size:8pt; 
+	vertical-align:top;
+}
+
+.booksGrid
+{
+	width:600px;
+}
+
+.booksHeader 
+{ 
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold; 
+	color: black; 
+	background-color: Bisque; 
+	text-align: center 
+}
+
+.booksRow
+{
+	vertical-align:top;
+}
+
+.booksAlternate
+{
+	vertical-align:top;
+	background-color: Cornsilk;
+}
+
+.bookLabel
+{
+	font-size: 14pt;
+	width: 800px;
+}
+
+.bookItem
+{
+	padding:5;
+}
+
+
+.editBackColour
+{
+	background-color:Yellow;
+}
+
+.plantsGrid
+{
+	width:600px;
+}
+
+.plantsHeader 
+{ 
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold; 
+	color: black; 
+	background-color: Bisque; 
+	text-align: center 
+}
+
+.plantsRow
+{
+	vertical-align:top;
+}
+
+.plantsAlternate
+{
+	vertical-align:top;
+	background-color: Cornsilk;
+}
+
+.plantPicture
+{
+	text-align: center;
+}
+
+.plantPrice
+{
+	text-align: right;
+}
+
+.plantsPager
+{
+	text-align:center;
+	font-weight: bold;
+}
+
+.customerGrid
+{
+	padding: 5;
+	border-color:black;
+	border-width: 1px;
+	font-size: 10pt;
+}
+
+.customerHeader 
+{ 
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold; 
+	color: white; 
+	background-color: #2f4660; 
+	text-align: center;
+	padding: 5;
+}
+
+.customerRow
+{
+	vertical-align:top;
+	text-align: left;
+}
+
+.customerAlternate
+{
+	vertical-align:top;
+	background-color: #7C99BB;
+	text-align: left;
+}
+
+.emailTable
+{
+	padding: 5;
+	font-size: 10pt;
+	width:95%;
+}
+
+.emailRow
+{
+	vertical-align:top;
+	text-align: left;
+}
+
+.emailHeader
+{
+	vertical-align:top;
+	background-color: #7C99BB;
+	text-align: left;
+	font-weight: bold;
+}
+
+.priorityList
+{
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+.error
+{
+	font-family: Arial;
+	font-size: 10pt;
+	color:red;
+}
+
+a:link {color: #00468C}
+a:active {color: green}
+a:visited {color: black}
+

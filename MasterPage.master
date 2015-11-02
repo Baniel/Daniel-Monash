@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" Debug="true" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Windows.Forms" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.OleDb" %>
+<%@ Import Namespace="System.Drawing" %>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <script runat="server">
+
+
+
+            void DayRender(Object sender, DayRenderEventArgs e)
+            {
+
+
+
+
+                DateTime today = DateTime.Today;
+
+                String todayStr = today.ToString("dd/MM/yyyy");
+
+                test.Text = todayStr;
+
+                dsEvent.SelectCommand = "SELECT * FROM CalenderEvent WHERE EventDate = #" + todayStr + "#";
+                String sqlCommand = dsEvent.SelectCommand;
+
+
+                DataView dv = (DataView)dsEvent.Select(DataSourceSelectArguments.Empty);
+               
+
+
+
+                if (dv.Count == 0)
+                {
+                    Event.Text = "No Events Scheduled for Today";
+                }
+                else
+                {
+
+                    if (e.Day.IsToday)
+                    {
+                        e.Cell.BackColor = System.Drawing.Color.Green;
+                    }
+
+
+
+                }
+
+
+            }
+
+            void Page_Load(Object sender, EventArgs e)
+            {
+                Calendar1.DayRender += new DayRenderEventHandler(this.DayRender);
+
+                string strConnection = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " +
+                                Server.MapPath("./CustomerTable.mdb") + ";";
+                string strSQL = "";
+                string strResultsHolder = "";
+                DateTime today = DateTime.Today;
+
+                String todayStr = today.ToString("dd/MM/yyyy");
+
+
+                strSQL =  "SELECT * FROM CalenderEvent WHERE EventDate = #" + todayStr + "#";
+
+                OleDbConnection objConnection = new OleDbConnection(strConnection);
+                OleDbCommand objCommand = new OleDbCommand(strSQL, objConnection);
+                OleDbDataReader objDataReader = null;
+                objConnection.Open();
+                objDataReader = objCommand.ExecuteReader();
+
+                Boolean find = false;
+
+
+
+                while (objDataReader.Read() == true)
+
+                {
+
+                    strResultsHolder += "<h2>Time: " + objDataReader[2].ToString() + "</h2>";
+                    strResultsHolder += "<h2>Event :" + objDataReader[3].ToString() + "</h2>";
+                    find = true;
+                }
+
+
+
+
+                objDataReader.Close();
+                objConnection.Close();
+
+
+                if (find == false)
+                {
+                    strResultsHolder = "No Event Scheduled for Today!!!";
+                }
+
+                Event.Text = strResultsHolder;
+
+
+
+            }
+
+
+    </script>
+
+
+
+
+
+    <title>Batman Game</title>
+
+    <link href="css/MasterPageStyle.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" method="post" runat="server">
+
+        <table>
+
+
+
+            <%--第一行标题--%>
+
+            <tr>
+
+                <td class="vborder"></td>
+                <td>
+                    <center>
+                    <asp:Image runat="server" ImageUrl="~/images/rightHeading.jpg"  Height="200" />
+                    </center>
+                </td>
+                <td class="vborder"></td>
+                <td>
+                    <asp:Image runat="server" ImageUrl="images/heading.jpg" Width="100%" Height="200" />
+                </td>
+                <td class="vborder"></td>
+
+
+            </tr>
+
+        </table>
+        <table>
+            <tr height="20px"></tr>
+
+            <%--左边栏和内容行 --%>
+            <tr class="mainbody">
+                <%--左边栏例--%>
+
+
+                <td class="sidebar">
+                    <asp:ContentPlaceHolder runat="server" ID="LeftSideBar" />
+
+                    <asp:Calendar runat="server" ID="Calendar1"
+                        BackColor="White" BorderColor="#999999"
+                        DayNameFormat="Shortest" Font-Size="0.8em"
+                        ForeColor="Black" Height="200px" Width="100%">
+
+                        <SelectedDayStyle BackColor="#8C8EAA" Font-Bold="True"
+                            ForeColor="White" Font-Size="0.8em" />
+
+                        <SelectorStyle BackColor="#8C8EAA" Font-Size="0.8em" />
+
+                        <WeekendDayStyle BackColor="#F3F3F6" Font-Size="0.8em" />
+
+                        <OtherMonthDayStyle ForeColor="#8C8EAA" Font-Size="0.9em" />
+
+                        <NextPrevStyle VerticalAlign="Bottom" Font-Bold="True"
+                            ForeColor="White" Font-Size="0.8em" />
+
+                        <DayHeaderStyle Font-Bold="True" Font-Size="0.8em"
+                            BackColor="#D2D5DE" />
+
+                        <TitleStyle BackColor="#8C8EAA" BorderColor="Black"
+                            Font-Bold="True" ForeColor="White" Font-Size="0.9em" />
+
+                        <DayStyle Font-Size="0.8em" />
+                    </asp:Calendar>
+
+
+                    <h2>
+                        <asp:Label runat="server" ID="Event"  ForeColor="WhiteSmoke" />
+                    </h2>
+
+
+                    <br />
+                    <asp:Label runat="server" ID="Result" BackColor="WhiteSmoke" ForeColor="WhiteSmoke"/>
+                </td>
+
+                <td class="vborder"></td>
+                <%-- 右内容例--%>
+
+
+                <td class="content" valign="top">
+                    <asp:ContentPlaceHolder runat="server" ID="Content" />
+                </td>
+
+                <td class="vborder"></td>
+
+            </tr>
+        </table>
+
+        <%--底栏--%>
+        <table>
+              <<h2> 
+
+       <asp:Label ID="test" runat="server" ForeColor="WhiteSmoke" ></asp:Label>
+   </h2> 
+
+            <tr height="10px"></tr>
+
+            <tr>
+                <td class="vborder"></td>
+                <td class="bottom">
+                    <center>
+                           <h3>Warner Bros. Entertainment, Inc</h3>
+                           <a href="DisplayCode.aspx?filename=MasterPage.master" target="_blank">
+                            <asp:Image ID="MasterPage" runat="server" ImageUrl="~/images/ButtonImages/codebuttonMasterPage.jpg" />
+                          </a>
+                     </center>
+
+                </td>
+                <td class="vborder">
+                    <asp:Image ID="icon" ImageUrl="http://www.batmanarkhamorigins.com/sites/default/files/images/legal/bao-esrb.png" runat="server" />
+                </td>
+            </tr>
+
+
+        </table>
+
+
+
+
+        <asp:AccessDataSource ID="dsEvent" runat="server" DataFile="~/CustomerTable.mdb"
+            SelectCommand="SELECT * FROM [CalenderEvent] ORDER BY [ID]"></asp:AccessDataSource>
+
+
+    </form>
+
+
+
+
+</body>
+</html>

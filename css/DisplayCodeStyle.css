@@ -1,0 +1,15 @@
+﻿.codeheader
+{
+    font-family:Arial;
+    color:blue;
+}
+
+.code
+{
+  font-family: "Tahoma";
+  font-size: "10pt";
+  border:1px solid Black;
+  background:#D6E4F0;
+  padding:10px;
+  margin:20px;
+}

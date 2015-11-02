@@ -1,0 +1,90 @@
+﻿html
+{
+    height:100%;
+}
+
+body
+{
+   
+   width:100%;
+   height:100%;
+   background-image:url(../images/background.jpg);
+}
+
+form
+{
+    height:100%;
+}
+
+
+
+table
+{
+    width:100%;
+
+}
+
+.mainbody
+{
+  width:100%;
+}
+
+
+.sidebar
+{
+    padding-left:30px;
+    height: 500px;
+    width:22.8%;
+}
+
+.content
+{
+    background-color:slategray;
+   
+}
+
+.vborder
+{
+    width:20px;
+}
+
+.hborder
+{
+    height:20px;
+}
+
+.bottom
+{
+    background-color:whitesmoke;
+    height:30px;
+}
+
+.textbox
+{
+    width:80px;
+    height:22px;
+}
+
+.text
+{
+    text-align:right;
+    color:black;
+}
+
+.Validator
+{
+    text-align:left;
+}
+
+.formResult
+{
+    background-color:coral;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+}
+
+.pnaelStyle
+{
+    font-family:'Comic Sans MS';
+
+}

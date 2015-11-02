@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  
+  <Ad>
+    <ImageUrl>~/images/advertisements/ad1.jpg</ImageUrl>       //要显示的图像URL
+    <NavigateUrl>https://youtu.be/9pnK8akbd2M</NavigateUrl>  //单击AdRotator控件时要转到的目标网页URL
+    <AlternateText>Game Trailer1</AlternateText>        //图像不能用时，或鼠标指向控件时显示的文本
+    <Impressions>100</Impressions>                 //一个指示广告可能显示频率的数值
+    <Height>300</Height>                           //广告的高度
+    <Width>450</Width>                             //广告的宽度
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/advertisements/ad2.jpg</ImageUrl>
+    <NavigateUrl>https://youtu.be/InUj9BT8KCc</NavigateUrl>
+    <AlternateText>Game Trailer1</AlternateText>
+    <Impressions>100</Impressions>
+    <Height>350</Height>
+    <Width>450</Width>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/advertisements/ad3.jpg</ImageUrl>
+    <NavigateUrl>https://youtu.be/3vJY9eHFdAU</NavigateUrl>
+    <AlternateText>Game Trailer3</AlternateText>
+    <Impressions>100</Impressions>
+    <Height>350</Height>
+    <Width>450</Width>
+  </Ad>
+
+  
+</Advertisements>

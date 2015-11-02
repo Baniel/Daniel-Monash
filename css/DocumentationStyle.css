@@ -1,0 +1,18 @@
+﻿h1
+{
+    font-size:xx-large;
+    font-family:'Comic Sans MS';
+
+}
+
+h4
+{
+    font-size:x-large;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+.documentation
+{
+    background-color:ButtonFace;
+}

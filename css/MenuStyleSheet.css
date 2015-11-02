@@ -1,0 +1,42 @@
+﻿.MenuStaItm
+{
+  color: #000000;
+  background-color: #FFFFCC;
+  font-size: 20px;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding-right: 20px;
+  border: 2px solid #729B78;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.MenuStaHov
+{
+  color: #ffffff;
+  background-color: #ADD8E6;
+  padding-left: 2px;
+  padding-top: 2px;
+  padding-right: 20px;
+  font-size: 20px;
+  border: 2px solid #348DA9;
+}
+
+.MenuDynItm
+{
+  font-family:'Comic Sans MS';
+  color: #000000;
+  background-color:darkgreen;
+  font-size: 20px;
+  padding: 2px;
+  border: 1px solid #C1B11A;
+}
+
+.MenuDynHov
+{
+  color: #FFFFFF;
+  background-color: #ADD8E6;
+  padding: 2px;
+  border: 2px solid #348DA9;
+  text-decoration: none;
+}
+

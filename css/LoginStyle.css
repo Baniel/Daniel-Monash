@@ -1,0 +1,87 @@
+﻿body 
+{
+    font-family:Arial;
+}
+
+.button
+{
+    background-color:#0080C0;
+    color:White;
+    border-width:4;
+    border-style:ridge;
+    font-size:16;
+    font-weight:bold;
+    height:50;
+    width:200;
+}
+
+
+
+.txtBox
+{
+    font-family:Arial;
+}
+
+.panel1
+{
+    background-color:lightgray;
+    border-width:4;
+    border-style:ridge;
+    width:500;
+    border-color:gray;
+}
+
+.panel2
+{
+    background-color:Aqua;
+    border-width:5;
+    width:500;
+    border-color:DarkBlue;
+    border-style:ridge;
+}
+
+table
+{
+    font-size:14;
+}
+
+.pnlNearMiss
+{
+    background-color: #C4ECFF;
+    color:Black;    
+    border-width:4;
+    border-style:ridge;
+    border-color:Blue;
+    font-family:Arial;
+    font-size:14;
+    width:400;
+    height:480;
+    text-align:center;
+}
+
+.loginValidator
+{
+    color:Red;
+}
+.loginFailure
+{
+    color:DarkRed;
+}
+
+.login
+{
+    background-color:#E8E8E8;
+    color: #456189;
+    border: 4px;
+    border-style: ridge;
+    font-family:Arial;
+    font-size:10pt;
+    height:250;
+    width:330;
+    text-align:center;
+         
+}
+
+
+    
+  
